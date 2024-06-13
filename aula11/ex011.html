@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>
+</head>
+
+<body>
+    <h1>País Natural</h1>
+    Em qual país você vive? <input type="text" name="valPais" id="valPais">
+    <input type="button" value="verificar" onclick="verificaPais()">
+    <div id="res"></div>
+    <script>
+        function verificaPais() {
+            var txtPais = window.document.querySelector('input#valPais').value;
+            var res = window.document.querySelector('div#res')
+
+            res.innerHTML = `<p>Seu país de orígem é o <strong>${txtPais}</strong>!</p>`
+            if (txtPais === 'Brasil') {
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é Estrangeiro!</p>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
